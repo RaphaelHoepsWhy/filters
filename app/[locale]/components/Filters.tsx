@@ -20,6 +20,7 @@ export default function Filters({}: Props) {
 
   return (
     <ToggleGroup
+      variant="outline"
       value={optimisticType}
       onValueChange={handleChange}
       type="single"
