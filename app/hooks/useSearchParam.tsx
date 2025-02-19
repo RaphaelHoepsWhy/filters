@@ -18,7 +18,15 @@ export default function useSearchParam(
   const { pathname, params } = usePathnameWithParams()
 
   const set = useCallback(
-    (value?: string, inputParams?: URLSearchParams) => {
+    ({
+      value,
+      inputParams,
+      optimisticSet,
+    }: {
+      value?: string
+      inputParams?: URLSearchParams
+      optimisticSet?: () => undefined
+    }) => {
       const queryParams =
         inputParams ?? new URLSearchParams(searchParams.toString())
 
@@ -29,6 +37,8 @@ export default function useSearchParam(
       }
 
       startTransition(() => {
+        if (!!optimisticSet) optimisticSet()
+
         router.push({
           pathname, // unresolved next.js pathname, e.g. /items/[id].
           params, // next.js routing params required to resolve pathname, e.g. the value of [id]
