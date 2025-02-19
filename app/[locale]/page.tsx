@@ -15,10 +15,13 @@ export default async function Home(props: Params) {
   const { type } = await props.searchParams
 
   return (
-    <div className="flex flex-col items-start gap-4 has-[[data-pending]]:opacity-50">
+    <div className="group flex flex-col items-start gap-4">
       <Filters />
       <Suspense fallback={<DishesSkeleton />}>
-        <Dishes type={type} />
+        <Dishes
+          type={type}
+          className="group-has-[[data-pending]]:animate-pulse group-has-[[data-pending]]:opacity-70"
+        />
       </Suspense>
     </div>
   )
