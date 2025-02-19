@@ -1,18 +1,20 @@
-import { getDishes } from "./actions"
-import Dish from "./components/Dish"
+import Dishes from "./components/Dishes"
 import Filters from "./components/Filters"
 
-export default async function Home() {
-  const dishes = await getDishes()
+type Params = {
+  searchParams: Promise<{
+    type?: string
+  }>
+  params: Promise<{ locale: string }>
+}
+
+export default async function Home(props: Params) {
+  const { type } = await props.searchParams
 
   return (
     <div className="flex flex-col items-start gap-4">
       <Filters />
-      <div className="grid grid-cols-6 gap-3">
-        {dishes.map((dish) => (
-          <Dish key={dish.name} dish={dish} />
-        ))}
-      </div>
+      <Dishes type={type} />
     </div>
   )
 }

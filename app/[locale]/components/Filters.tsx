@@ -19,9 +19,9 @@ export default function Filters({}: Props) {
 
   return (
     <ToggleGroup value={type} onValueChange={handleChange} type="single">
-      <ToggleGroupItem value="pizza">Pizza</ToggleGroupItem>
-      <ToggleGroupItem value="pasta">Pasta</ToggleGroupItem>
-      <ToggleGroupItem value="noodles">Noodles</ToggleGroupItem>
+      <ToggleGroupItem value="Pizza">Pizza</ToggleGroupItem>
+      <ToggleGroupItem value="Pasta">Pasta</ToggleGroupItem>
+      <ToggleGroupItem value="Noodles">Noodles</ToggleGroupItem>
     </ToggleGroup>
   )
 }
