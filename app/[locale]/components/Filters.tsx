@@ -1,7 +1,7 @@
 "use client"
 
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
-import { useSearchParams } from "next/navigation"
+// import { useSearchParams } from "next/navigation"
 import React from "react"
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 }
 
 export default function Filters({}: Props) {
-  const searchParams = useSearchParams()
+  // const searchParams = useSearchParams()
 
   return (
     <ToggleGroup type="multiple">
