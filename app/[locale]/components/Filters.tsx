@@ -1,7 +1,7 @@
 "use client"
 
 import useSearchParam from "@/app/hooks/useSearchParam"
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
+import { ToggleGroup, ToggleGroupItem } from "@/ui/toggle-group"
 // import { useSearchParams } from "next/navigation"
 import React from "react"
 
@@ -18,7 +18,12 @@ export default function Filters({}: Props) {
   }
 
   return (
-    <ToggleGroup value={type} onValueChange={handleChange} type="single">
+    <ToggleGroup
+      value={type}
+      onValueChange={handleChange}
+      type="single"
+      data-pending={isPending ? "" : undefined}
+    >
       <ToggleGroupItem value="Pizza">Pizza</ToggleGroupItem>
       <ToggleGroupItem value="Pasta">Pasta</ToggleGroupItem>
       <ToggleGroupItem value="Noodles">Noodles</ToggleGroupItem>

@@ -1,10 +1,12 @@
+"use server"
+
 import { DishData, DISHES } from "./data"
 
 export const getDishes = async ({ type }: { type?: string } = {}): Promise<
   DishData[]
 > => {
   return new Promise((resolve) => {
-    const delay = 300 + Math.random() * 500
+    const delay = 2000
 
     setTimeout(() => {
       if (type) {

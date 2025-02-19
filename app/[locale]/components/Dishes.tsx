@@ -11,7 +11,7 @@ export default async function Dishes({ type }: Props) {
   const dishes = await getDishes({ type })
 
   return (
-    <div className="grid grid-cols-6 gap-3">
+    <div className="grid w-full grid-cols-6 gap-3">
       {dishes.map((dish) => (
         <Dish key={dish.name} dish={dish} />
       ))}

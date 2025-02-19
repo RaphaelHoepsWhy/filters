@@ -8,10 +8,7 @@ type Props = {
 
 export default function Dish({ dish }: Props) {
   return (
-    <div
-      key={dish.name}
-      className="rounded-md border border-neutral-900 bg-neutral-200 p-2"
-    >
+    <div key={dish.name} className="rounded-md bg-neutral-200 p-2">
       <div className="grid grid-cols-[auto,1fr] gap-x-1">
         <div className="font-bold">Name:</div>
         <div> {dish.name} </div>
