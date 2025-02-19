@@ -1,6 +1,6 @@
 "use client"
 
-import useSearchParam from "@/app/hooks/useSearchParam"
+import useSearchParam from "@/hooks/useSearchParam"
 import { ToggleGroup, ToggleGroupItem } from "@/ui/toggle-group"
 // import { useSearchParams } from "next/navigation"
 import React, { useOptimistic } from "react"

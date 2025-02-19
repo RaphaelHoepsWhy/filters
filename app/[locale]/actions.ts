@@ -6,7 +6,7 @@ export const getDishes = async ({ type }: { type?: string } = {}): Promise<
   DishData[]
 > => {
   return new Promise((resolve) => {
-    const delay = 2000
+    const delay = 1200
 
     setTimeout(() => {
       if (type) {
