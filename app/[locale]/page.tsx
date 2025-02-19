@@ -20,7 +20,7 @@ export default async function Home(props: Params) {
       <Suspense fallback={<DishesSkeleton />}>
         <Dishes
           type={type}
-          className="group-has-[[data-pending]]:animate-pulse group-has-[[data-pending]]:opacity-70"
+          className="group-has-[[data-pending]]:animate-pulse-strong"
         />
       </Suspense>
     </div>

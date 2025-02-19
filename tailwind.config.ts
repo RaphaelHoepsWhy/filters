@@ -57,6 +57,16 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      animation: {
+        "pulse-strong":
+          "pulse-strong 0.7s cubic-bezier(0.4, 0, 0.6, 1) infinite alternate",
+      },
+      keyframes: {
+        "pulse-strong": {
+          from: { opacity: "0.7" },
+          to: { opacity: "0.3" },
+        },
+      },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
