@@ -6,11 +6,6 @@ export type DishData = {
 
 export const DISHES: DishData[] = [
   {
-    name: "Lasagne",
-    type: "Pasta Dish",
-    tags: ["Cheese", "Tomato", "Beef", "Garlic"],
-  },
-  {
     name: "Carbonara",
     type: "Pasta",
     tags: ["Cheese", "Bacon", "Egg", "Garlic", "Pepper"],
@@ -19,6 +14,16 @@ export const DISHES: DishData[] = [
     name: "Margherita",
     type: "Pizza",
     tags: ["Cheese", "Tomato", "Basil", "Garlic", "Olive Oil"],
+  },
+  {
+    name: "Pepperoni",
+    type: "Pizza",
+    tags: ["Cheese", "Tomato", "Pepperoni", "Garlic", "Oregano"],
+  },
+  {
+    name: "Quattro Formaggi",
+    type: "Pizza",
+    tags: ["Mozzarella", "Gorgonzola", "Parmesan", "Ricotta", "Olive Oil"],
   },
   {
     name: "Pad Thai",

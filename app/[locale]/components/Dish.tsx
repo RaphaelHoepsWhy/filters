@@ -1,5 +1,5 @@
 import React from "react"
-import { DishData } from "../../data"
+import { DishData } from "../data"
 
 type Props = {
   className?: string
