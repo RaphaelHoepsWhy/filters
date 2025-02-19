@@ -7,7 +7,7 @@ type Props = {
 
 export default function DishesSkeleton({}: Props) {
   return (
-    <div className="grid w-full grid-cols-6 gap-3">
+    <div className="grid w-full grid-cols-3 gap-3 xl:grid-cols-6">
       <DishSkeleton />
       <DishSkeleton />
       <DishSkeleton />
