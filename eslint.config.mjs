@@ -24,6 +24,7 @@ const eslintConfig = [
     rules: {
       "tailwindcss/no-custom-classname": ["warn", { whitelist: [] }],
       "no-console": ["warn", { allow: ["error"] }],
+      "@typescript-eslint/no-explicit-any": "off",
     },
   },
 ]

@@ -1,10 +1,12 @@
+import { getDishes } from "./actions"
 import Dish from "./components/Dish"
-import { DISHES } from "./data"
 
-export default function Home() {
+export default async function Home() {
+  const dishes = await getDishes()
+
   return (
     <div className="grid grid-cols-6 gap-3">
-      {DISHES.map((dish) => (
+      {dishes.map((dish) => (
         <Dish key={dish.name} dish={dish} />
       ))}
     </div>
